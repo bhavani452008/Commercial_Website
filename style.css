@@ -1,0 +1,286 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f8fc;
+    color: #222;
+}
+
+/* Navigation */
+.navbar {
+    background: #203f91;
+    color: white;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 27px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffcc55;
+}
+
+/* Common heading */
+.heading {
+    text-align: center;
+    color: #203f91;
+    margin-bottom: 35px;
+    font-size: 30px;
+}
+
+section {
+    padding: 65px 10%;
+}
+
+/* Home Hero */
+.hero {
+    min-height: 420px;
+    background:
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1400");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 43px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #203f91;
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #ff9800;
+}
+
+/* Cards using Flexbox */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    width: 30%;
+    min-width: 230px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,.12);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    color: #203f91;
+}
+
+.card p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.price {
+    color: #e67e00;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 12px;
+}
+
+/* About */
+.about-content {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    line-height: 1.9;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+/* Statistics */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.stat {
+    text-align: center;
+    background: #203f91;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 150px;
+}
+
+/* Reviews */
+.review-card {
+    background: white;
+    padding: 25px;
+    width: 30%;
+    min-width: 230px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,.12);
+}
+
+.stars {
+    color: #ffae00;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.rating {
+    text-align: center;
+    margin: 20px 0 35px;
+}
+
+.rating h2 {
+    color: #203f91;
+    font-size: 35px;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background: #203f91;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    line-height: 2;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .card,
+    .review-card {
+        width: 45%;
+    }
+}
+
+@media(max-width: 480px) {
+    section {
+        padding: 40px 5%;
+    }
+
+    .card,
+    .review-card {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .heading {
+        font-size: 25px;
+    }
+}
